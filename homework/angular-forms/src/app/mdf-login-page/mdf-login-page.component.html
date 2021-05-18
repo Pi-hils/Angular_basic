@@ -1,0 +1,12 @@
+<div>
+  <h2>Login Page using Model Driven Form</h2>
+  <form [formGroup]="loginRef">
+    <label>User Name: </label>
+    <input type="text" formControlName="user"><br><br>
+    <label>Password: </label>
+    <input type="password"formControlName="pass"/><br>
+    <br>
+    <input type="button" value="click" (click)="checkUser()">
+  </form>
+  {{result}}
+</div>

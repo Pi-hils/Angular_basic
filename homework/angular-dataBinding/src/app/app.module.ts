@@ -6,6 +6,11 @@ import { AppComponent } from './app.component';
 import { StringInterpolationComponent } from './string-interpolation/string-interpolation.component';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
+import { TemplateReferenceComponent } from './template-reference/template-reference.component';
+
+import { TwoDataBindingComponent } from './two-data-binding/two-data-binding.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -13,11 +18,15 @@ import { EventBindingComponent } from './event-binding/event-binding.component';
     AppComponent,
     StringInterpolationComponent,
     PropertyBindingComponent,
-    EventBindingComponent
+    EventBindingComponent,
+    TemplateReferenceComponent,
+    TwoDataBindingComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
