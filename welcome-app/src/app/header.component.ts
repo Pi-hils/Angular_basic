@@ -7,5 +7,6 @@ import {Component} from '@angular/core';
 })
 
 export class HeaderComponent {
-  msg:string = "This is header component";
+  msg:string = "Learning all about components- parent, child, decorators(selctor, templateUrl and the optional styleUrl.";
+
 }

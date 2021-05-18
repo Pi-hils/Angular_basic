@@ -13,6 +13,6 @@ export class AppComponent {
 
 
   display() : string{
-    return "welcome "+ this.name;
+    return "welcome to "+ this.name +"'s first day of learning Angular";
   }
 }

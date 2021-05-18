@@ -6,14 +6,15 @@
 <br>
 <p>To anyone thinking that it is impossible, remember these words...</p>
 <div>
-  <img src={{image}}>
+  <app-string-interpolation></app-string-interpolation>
+  <app-property-binding></app-property-binding>
+  
 </div>
- <!-- property binding - you put the property in an array and not interpolate the variable -->
-<img [src] = "image">
+ <!-- property binding - you put the property in an array and not interpolate the variable --
 
 <!-- //events bunding -->
 <div>
   <button (click) ="goBack()">Go Back</button>
 </div>
 
-<router-outlet></router-outlet>
+
