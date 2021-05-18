@@ -3,10 +3,18 @@
   <form [formGroup]="loginRef">
     <label>User Name: </label>
     <input type="text" formControlName="user"><br><br>
+    <div *ngIf="loginRef.controls.user.errors &&
+    (loginRef.controls.user.dirty || loginRef.controls.user.touched)">
+  <span style="color: red">Username required please</span>
+</div>
+  <br>
     <label>Password: </label>
     <input type="password"formControlName="pass"/><br>
+    <div *ngIf="loginRef.controls.pass.errors &&
+    (loginRef.controls.pass.dirty || loginRef.controls.pass.touched)">
+  <span style="color: red">Password required please</span></div>
     <br>
-    <input type="button" value="click" (click)="checkUser()">
+    <input type="button" value="click" (click)="checkUser()" [disabled]="loginRef.invalid">
   </form>
   {{result}}
 </div>

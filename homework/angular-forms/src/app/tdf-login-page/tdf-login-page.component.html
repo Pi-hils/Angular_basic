@@ -3,13 +3,21 @@
   <h2>Login Page Using Template Drivem Form</h2>
     <form #loginRef="ngForm" (ngSubmit)="checkUser(loginRef)">
       <label>Username</label>
-      <input type="text" name="user" placeholder="Insert something.." ngModel>
+      <input type="text" name="user" placeholder="Insert something.." ngModel required #userRef="ngModel">
+      <div *ngIf="userRef.errors && (userRef.dirty || userRef.touched)">
+        <span style="color:red;">User Name is required</span>
+    </div>
+   
       <br><br>
       <label>Password Here</label>
-      <input type="password" name="password" placeholder="Insert address" ngModel>
+      <input type="password" name="password" placeholder="Insert address" required ngModel #passRef="ngModel">
 
       <br><br>
-      <input type="submit" value="submit" >
+      <div *ngIf="passRef.errors && (passRef.dirty || passRef.touched)">
+        <span style="color:red;">Password is required</span>
+    </div>
+      <input type="submit" value="submit" [disabled]="loginRef.invalid">
+      
       <input type="reset" value="reset">
       <br><br>
       {{result}}
