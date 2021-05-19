@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class StructureDirectiveComponent implements OnInit {
   flag:boolean=false;
   b1:string="show";
-  
+  stdNames:Array<string>=["Hilda","Ross","Jashana","Sabiq"]
   constructor() { }
 
   ngOnInit(): void {

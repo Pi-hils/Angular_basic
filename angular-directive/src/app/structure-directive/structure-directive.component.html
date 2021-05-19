@@ -4,4 +4,8 @@
   <input type="button" [value]="b1" (click)="change()">
   <hr/>
   <h4 *ngIf="flag">Hellooooo...</h4>
+  <hr/>
+  <ul>
+  <li *ngFor="let sname of stdNames">{{sname}}</li>
+  </ul>
 </div>
