@@ -1,5 +1,5 @@
 export class MyCustomService{
-  sayHllo(name:string){
-    return "Welcom to Custom Service without DI "+name
+  sayHello(name:string){
+    return "Welcome to Custom Service without DI "+name
   }
 }
