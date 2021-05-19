@@ -8,4 +8,33 @@
   <ul>
   <li *ngFor="let sname of stdNames">{{sname}}</li>
   </ul>
+  <br>
+  <!-- simple form step 2 -->
+  <form [formGroup]="empRef">
+    <input type="text" placeholder="Enter Id" formControlName="empid" />
+    <input type="text" placeholder="Enter Name" formControlName="empname" />
+    <input type="text" placeholder="Enter Salary" formControlName="empsalary" />
+    <input type="button" value="Click here" (click)="addEmployee()">
+  </form>
+<!-- Structive table for For loop(inside constructor in ts) -->
+  <h3>Employee Details</h3>
+  <table border="1">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Salary</th>
+    </tr>
+    <tr *ngFor="let emp of employees">
+      <td>{{emp.id}}</td>
+      <td>{{emp.name}}</td>
+      <td>{{emp.salary}}</td>
+    </tr>
+  </table>
+  <hr/>
+  <h3>ngStyle and ngClass</h3>
+  <p style="color:red;"><i>Welcome to style attribute with basic CSS</i></p> 
+  <p [ngStyle]="{'color':'blue'}">Welome to ngStyle attribute using Angular</p>
+  <p [ngStyle]="styleVariable">ngStyle is better. You can make it a variable and use it over and over</p> 
+  <p class="nyClass">Welcome to class selector using CSS</p>
+  <p [ngClass]=" 'myClass' ">Welcome to class selector using Angular ngClass</p>
 </div>
