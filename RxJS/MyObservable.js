@@ -1,6 +1,7 @@
 // // 1. import
 import { Observable} from 'rxjs';
 
+// won't need this code when using this.http.get(URL)... but for learning sake...
 let sub = Observable.create((sub)=> {
   
   sub.next("Hi");
