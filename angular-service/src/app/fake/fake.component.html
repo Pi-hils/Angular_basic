@@ -1,5 +1,20 @@
 <p>fake works!</p>
 <div>
-  <input type="button" value="Load Fake Data" (click)="loadData()" />
+  <input type="button" value="Load Fake Data" (click)="loadData()" class="btn btn-success"/>
   <br>
+  <hr />
+  <table border='1' class="table table-striped">
+    <tr class="thead-dark">
+      <th>UserId</th>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Completed</th>
+    </tr>
+    <tr *ngFor="let ff of fakeArray">
+      <td>{{ff.userId}}</td>
+      <td>{{ff.id}}</td>
+      <td>{{ff.title}}</td>
+      <td>{{ff.completed}}</td>
+    </tr>
+  </table>
 </div>
