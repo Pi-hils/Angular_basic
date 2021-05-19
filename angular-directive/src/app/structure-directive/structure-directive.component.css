@@ -1,3 +1,16 @@
 .myClass{
   background-color: blueviolet;
 }
+
+.firstClass{
+  background-color: cadetblue;
+  font-size:25px;
+  border:cornflowerblue solid 2px;
+}
+
+.secondClass{
+  color: white;
+  background-color:gold;
+  font-size: 10px;
+  border:greenyellow dotted 2px;
+}

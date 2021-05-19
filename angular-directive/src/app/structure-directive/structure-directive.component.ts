@@ -17,6 +17,8 @@ export class StructureDirectiveComponent implements OnInit {
 
   // step 1
   fanme:string = "Hilda Amponsah";
+  f1:boolean=true;
+  f2:boolean=false;
 // styling a variable inn Angular - easier than CSS
   styleVariable={'color':'red','font-size':'24px'}
 
@@ -35,6 +37,10 @@ export class StructureDirectiveComponent implements OnInit {
      this.employees.push(emp3);
      this.employees.push(emp4);
      this.employees.push(new Employee(5,"Ursula",4000));
+  }
+  changeColor(){
+    this.f1=!this.f1;
+    this.f2=!this.f2;
   }
   // dynamically adding the employees to the table
   addEmployee(){

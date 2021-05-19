@@ -1,7 +1,7 @@
-<div>
+<div class="container">
   <h2 *ngIf="false">Welcome to Angular Directive</h2>
  
-  <input type="button" [value]="b1" (click)="change()">
+  <input type="button" [value]="b1" (click)="change()" class="btn btn-warning">
   <hr/>
   <h4 *ngIf="flag">Hellooooo...</h4>
   <hr/>
@@ -10,15 +10,15 @@
   </ul>
   <br>
   <!-- simple form step 2 -->
-  <form [formGroup]="empRef">
-    <input type="text" placeholder="Enter Id" formControlName="empid" />
-    <input type="text" placeholder="Enter Name" formControlName="empname" />
-    <input type="text" placeholder="Enter Salary" formControlName="empsalary" />
-    <input type="button" value="Click here" (click)="addEmployee()">
+  <form [formGroup]="empRef" class="form-group">
+    <input type="text" placeholder="Enter Id" formControlName="empid" class="form-control"/>
+    <input type="text" placeholder="Enter Name" formControlName="empname" class="form-control" />
+    <input type="text" placeholder="Enter Salary" formControlName="empsalary" class="form-control" />
+    <input type="button" value="Click here" (click)="addEmployee()" class="btn btn-primary" />
   </form>
 <!-- Structive table for For loop(inside constructor in ts) -->
   <h3>Employee Details</h3>
-  <table border="1">
+  <table border="1" class="table">
     <tr>
       <th>Id</th>
       <th>Name</th>
@@ -35,6 +35,9 @@
   <p style="color:red;"><i>Welcome to style attribute with basic CSS</i></p> 
   <p [ngStyle]="{'color':'blue'}">Welome to ngStyle attribute using Angular</p>
   <p [ngStyle]="styleVariable">ngStyle is better. You can make it a variable and use it over and over</p> 
-  <p class="nyClass">Welcome to class selector using CSS</p>
+  <p class="myClass">Welcome to class selector using CSS</p>
   <p [ngClass]=" 'myClass' ">Welcome to class selector using Angular ngClass</p>
+  <!-- making this a variable inside the ts file-->
+  <p [ngClass]="{firstClass:f1, secondClass:f2}">Welcome to class selector using Angular ngClass</p>
+  <input type="button" value="change effect" (click)="changeColor()"/>
 </div>
