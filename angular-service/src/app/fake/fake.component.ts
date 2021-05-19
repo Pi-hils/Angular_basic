@@ -13,7 +13,7 @@ export class FakeComponent implements OnInit {
   ngOnInit(): void {
   }
   loadData(){
-
+    this.fake.loadFakeData();
   }
 
 }

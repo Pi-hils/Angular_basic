@@ -8,6 +8,8 @@ export class FakeService {
   constructor(public http:HttpClient) { }
 
   loadFakeData(){
-    this.http.get("https://jsonplaceholder.typicode.com/todos").subscribe
+    this.http.get("https://jsonplaceholder.typicode.com/todos").subscribe(data=>console.log(data),
+    error=>console.log(error),  //async coding
+    ()=>console.log("completed"))
   }
 }
