@@ -24,5 +24,8 @@ export class ProductService {
     deleteProductRecord(id:any):Observable<Product>{
       return this.http.delete<Product>("http://localhost:3000/products/" + id)   
      }
-   
-}
+
+  updateProductDetails(product:any):Observable<Product>{
+    return this.http.put<Product>("http://localhost:3000/products/"+product.id,product);
+  }
+ }
