@@ -10,12 +10,15 @@ export class AppComponent {
 
   parentName:string="";
   cName?:string=""
+  EvenSum?:number=0
+  OddSum?:number=0
 
+  wholeNumber:Array<number>=[];
 
   passName(nameRef:any){
     this.parentName=nameRef.value
   }
   addNumber(numberRef:any){
-
+this.wholeNumber.push(numberRef.value)
   }
 }

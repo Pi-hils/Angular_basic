@@ -7,8 +7,10 @@
   <hr/>
   <app-child1 [pname]="parentName" (eventRef)="cName=$event"></app-child1>
   <hr/>
-  <app-child2></app-child2>
+  <app-child2 [parentArrayNum]="wholeNumber" (evenRef)="EvenSum=$event" (oddRef)="OddSum=$event"></app-child2>
   <hr/>
   Number :<input type="number" #numberRef/>
   <input type="button" value="Enter Number" (click)="addNumber(numberRef)"/>
+  <br><br>
+  Sum of event {{EvenSum}} and Odd Sum: {{OddSum}}
 </div>
