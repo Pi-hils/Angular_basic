@@ -18,6 +18,7 @@ export class ProductComponent implements OnInit {
 
   resultMessage:string="";
   products?:Array<Product>;
+idVar:boolean=false
 
   constructor(public pser:ProductService) {  //Only used for DI
     console.log("constructor...1")
@@ -47,5 +48,11 @@ export class ProductComponent implements OnInit {
      this.pser.retrieveProductDetails().subscribe(result=>this.products=result)
   })
 }
+
+  updateRec(product:any){
+    console.log(product);
+    this.productRef.setValue(product)
+    this.idVar=true;
+  }
 
 }

@@ -3,7 +3,7 @@
   <h2 style>Products</h2>
   <form [formGroup]="productRef">
     <label>PID</label>
-    <input type="text" placeholder="enter id" formControlName="id" /><br><br>
+    <input type="text" placeholder="enter id" formControlName="id" [readOnly]="idVar" /><br><br>
 
     <label>PName</label>
     <input type="text" placeholder="name" formControlName="pname" /><br><br>
@@ -23,6 +23,7 @@
       <th>Name</th>
       <th>Price</th>
       <th>Delete</th>
+      <th>Update</th>
     </tr>
     <tr *ngFor="let product of products">
       <td>{{product.id}}</td>
@@ -30,6 +31,8 @@
       <td>{{product.price}}</td>
       <td><input type="button" value="Delete" 
         (click)="deleteProduct(product.id)"/></td>
+      <td><input type="button" value="Update"
+          (click)="updateRec(product)" /></td>
     </tr>
   </table>
 </div>
