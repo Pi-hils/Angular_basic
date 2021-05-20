@@ -15,3 +15,5 @@ let sub = Observable.create((sub)=> {
 sub.subscribe(data=>console.log(data),
     err=>console.log(err),
     ()=>console.log("completed"))
+
+    // To run code in terminal, ran node -r esm MyObservable.js

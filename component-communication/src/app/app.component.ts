@@ -6,8 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  fname:string="Hilda Amp";
-  salary:number = 50000;
-  dd = new Date(); 
-
+  title = 'component-communication';
 }
