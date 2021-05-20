@@ -9,7 +9,13 @@ export class AppComponent {
   title = 'component-communication';
 
   parentName:string="";
-  passNName(nameRef:any){
-    this.parentName=nameRef.valuw
+  cName?:string=""
+
+
+  passName(nameRef:any){
+    this.parentName=nameRef.value
+  }
+  addNumber(numberRef:any){
+
   }
 }

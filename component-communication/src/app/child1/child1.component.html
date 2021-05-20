@@ -2,4 +2,9 @@
 <div>
   <h2>Child 1 Component</h2>
   Parent name is child1 component {{pname}}
+  <br>
+  <input type="text" #childRef><br>
+  <input type="button" value="Click here" (click)="storeData(childRef)" />
+  <br>
+  Child Name is {{childName}}
 </div>

@@ -1,12 +1,14 @@
 <div>
   <h1>Parent Component</h1>
   Name: <input type="text" #nameRef />
-  <input type="button" value="Click"/>
+  <input type="button" value="Click" (click)="passName(nameRef)"/>
   <br>
-  My name is {{parentName}}
+  My name is {{parentName}} and child 1 Name is {{cName}}
   <hr/>
-  <app-child1></app-child1>
+  <app-child1 [pname]="parentName" (eventRef)="cName=$event"></app-child1>
   <hr/>
   <app-child2></app-child2>
   <hr/>
+  Number :<input type="number" #numberRef/>
+  <input type="button" value="Enter Number" (click)="addNumber(numberRef)"/>
 </div>
