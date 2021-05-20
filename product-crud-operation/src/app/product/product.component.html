@@ -1,0 +1,33 @@
+
+<div>
+  <h2 style>Products</h2>
+  <form [formGroup]="productRef">
+    <label>PID</label>
+    <input type="text" placeholder="enter id" formControlName="id" /><br><br>
+
+    <label>PName</label>
+    <input type="text" placeholder="name" formControlName="pname" /><br><br>
+
+    <label>Price</label>
+    <input type="text" formControlName="price" /><br>
+
+    <input type="submit" value="Store Product" (click)="storeProduct()" class="btn btn-warning"/>
+    <input type="reset" value="Reset" class="btn btn-success" />
+  </form>
+  <br>
+  {{resultMessage}}
+  <hr/>
+  <table boder="1" class="table">
+    <tr class="thead-dark">
+      <th>PID</th>
+      <th>Name</th>
+      <th>Price</th>
+    </tr>
+    <tr *ngFor="let product of products">
+      <td>{{product.id}}</td>
+      <td>{{product.pname}}</td>
+      <td>{{product.price}}</td>
+      
+    </tr>
+  </table>
+</div>

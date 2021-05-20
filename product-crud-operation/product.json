@@ -1,19 +1,59 @@
 {
-  "posts": [
+  "products": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "pname": "TV",
+      "price": 5000
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "pname": "Computer",
+      "price": 6000
+    },
+    {
+      "id": 3,
+      "pname": "banana",
+      "price": "3"
+    },
+    {
+      "id": 4,
+      "pname": "banana",
+      "price": "3"
+    },
+    {
+      "id": 5,
+      "pname": "banana",
+      "price": "3"
+    },
+    {
+      "id": 6,
+      "pname": "banana",
+      "price": "3"
+    },
+    {
+      "id": 7,
+      "pname": "banana",
+      "price": "3"
+    },
+    {
+      "id": 8,
+      "pname": "apple",
+      "price": "1"
+    },
+    {
+      "id": "10",
+      "pname": "Apple",
+      "price": "4"
+    },
+    {
+      "id": "9",
+      "pname": "water melon",
+      "price": "2"
+    },
+    {
+      "id": "11",
+      "pname": "kiwi",
+      "price": "4"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
