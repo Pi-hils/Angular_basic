@@ -20,5 +20,9 @@ export class ProductService {
     retrieveProductDetails():Observable<Product[]>{
       return this.http.get<Product[]>("http://localhost:3000/products");
     }
+
+    deleteProductRecord(id:any):Observable<Product>{
+      return this.http.delete<Product>("http://localhost:3000/products/" + id)   
+     }
    
 }

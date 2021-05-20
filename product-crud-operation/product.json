@@ -1,19 +1,9 @@
 {
   "products": [
     {
-      "id": 1,
-      "pname": "TV",
-      "price": 5000
-    },
-    {
       "id": 2,
       "pname": "Computer",
       "price": 6000
-    },
-    {
-      "id": 3,
-      "pname": "banana",
-      "price": "3"
     },
     {
       "id": 4,

@@ -41,4 +41,11 @@ export class ProductComponent implements OnInit {
     })
   }
 
+  deleteProduct(id:any){
+    console.log("deleted" + id)
+    this.pser.deleteProductRecord(id).subscribe(result=>{
+     this.pser.retrieveProductDetails().subscribe(result=>this.products=result)
+  })
+}
+
 }

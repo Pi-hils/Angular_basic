@@ -22,12 +22,14 @@
       <th>PID</th>
       <th>Name</th>
       <th>Price</th>
+      <th>Delete</th>
     </tr>
     <tr *ngFor="let product of products">
       <td>{{product.id}}</td>
       <td>{{product.pname}}</td>
       <td>{{product.price}}</td>
-      
+      <td><input type="button" value="Delete" 
+        (click)="deleteProduct(product.id)"/></td>
     </tr>
   </table>
 </div>
