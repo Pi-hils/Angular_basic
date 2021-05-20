@@ -11,7 +11,7 @@
     <label>Price</label>
     <input type="text" formControlName="price" /><br>
 
-    <input type="submit" value="Store Product" (click)="storeProduct()" class="btn btn-warning"/>
+    <input type="submit" [value]="buttonValue" (click)="storeProduct()" class="btn btn-warning"/>
     <input type="reset" value="Reset" class="btn btn-success" />
   </form>
   <br>

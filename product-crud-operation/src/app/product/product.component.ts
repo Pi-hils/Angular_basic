@@ -19,6 +19,7 @@ export class ProductComponent implements OnInit {
   resultMessage:string="";
   products?:Array<Product>;
 idVar:boolean=false
+  buttonValue: string="Store Rec";
 
   constructor(public pser:ProductService) {  //Only used for DI
     console.log("constructor...1")
@@ -53,6 +54,7 @@ idVar:boolean=false
     console.log(product);
     this.productRef.setValue(product)
     this.idVar=true;
+    this.buttonValue="Update Rec";
   }
 
 }
