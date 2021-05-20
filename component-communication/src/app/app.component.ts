@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'component-communication';
+
+  parentName:string="";
+  passNName(nameRef:any){
+    this.parentName=nameRef.valuw
+  }
 }
