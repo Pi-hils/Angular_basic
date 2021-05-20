@@ -52,6 +52,7 @@ idVar:boolean=false
        this.buttonValue="Store Rec";      
    })
   }
+  this.productRef.reset();
 }
 
   deleteProduct(id:any){
