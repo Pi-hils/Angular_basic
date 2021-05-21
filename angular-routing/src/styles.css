@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+.all {
+  text-align: center;
+}
+ul{
+  list-style: none;
+  margin: 0px;
+}
+
+li{
+  padding:10px;
+  display: inline-flex
+}
+
+a:hover{
+  color:teal;
+}
+
+div  li:hover{
+  background-color: turquoise;
+}
