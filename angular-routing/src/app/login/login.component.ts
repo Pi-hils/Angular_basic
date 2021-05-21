@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormControl } from '@angular/forms'
+import { Router } from '@angular/router';
 import {LoginService } from '../login.service'
 
 @Component({
@@ -14,7 +15,7 @@ export class LoginComponent implements OnInit {
   });
   result?:string="";
 
-  constructor(public ls:LoginService) { }
+  constructor(public ls:LoginService, public router:Router) { }
 
   ngOnInit(): void {
   }
@@ -31,6 +32,7 @@ export class LoginComponent implements OnInit {
           });
           if(flag>0){
               this.result="Successfully Login"
+              this.router.navigate(["home"]);
           }else {
             this.result="Failure try once again"
           }
