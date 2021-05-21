@@ -28,6 +28,7 @@ export class LoginComponent implements OnInit {
           result.forEach(res=>{
                 if(res.user==login.user && res.pass==login.pass){
                   //for login and register(siblings) to communocate, we need to setItem with key,value
+                  //JWT:JSON Web Token =when people have he same name and password, json creates an id for them
                   sessionStorage.setItem("userInfo",res.user)
                 flag++;
             }
