@@ -17,5 +17,8 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  registerAccount(){
+
+  }
 
 }

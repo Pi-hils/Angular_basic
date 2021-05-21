@@ -1,12 +1,12 @@
 <p>register works!</p>
   <h3>Register Your Account</h3>
 <div>
-  <form [formGroup]="loginRef" class="form">
+  <form [formGroup]="registerRef" class="form">
     <label>UserName</label>
     <input type="text" formControlName="user"/><br/>
     <label>Password</label>
     <input type="password" formControlName="pass"/><br/>
-    <input type="button" value="Sign In!" (click)="register()"/>
+    <input type="button" value="Sign In!" (click)="registerAccount()"/>
     <input type="reset" value="reset"/>
   </form>
   {{result}}

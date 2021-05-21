@@ -13,4 +13,8 @@ export class LoginService {
   checkLogin():Observable<Login[]> {
     return this.http.get<Login[]>("http://localhost:3030/login");
   }
+
+  createLogin(login:any):Observable<Login>{
+    return this.http.post<Login>("http://localhost:3030/login",login);
+  }
 }
