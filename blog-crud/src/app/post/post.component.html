@@ -1,0 +1,13 @@
+<p>post works!</p>
+<div>
+  <form [formGroup]="postRef">
+  <label>ID:</label><br>
+  <input type="text" placeholder="enter id "formControlname="id"><br>
+  <label>Name:</label><br>
+  <input type="text" placeholder="enter name "formControlname="pname"><br><br>
+  <label>Post Here:</label><br>
+  <textarea placeholder="and it goes like this..." formControlname="blog_post"></textarea><br>
+  <input type="button" value="Post" />
+  <input type="button" value="reset">
+  </form>
+</div>
