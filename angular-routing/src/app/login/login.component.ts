@@ -27,6 +27,8 @@ export class LoginComponent implements OnInit {
     this.ls.checkLogin().subscribe(result=> {
           result.forEach(res=>{
                 if(res.user==login.user && res.pass==login.pass){
+                  //for login and register(siblings) to communocate, we need to setItem with key,value
+                  sessionStorage.setItem("userInfo",res.user)
                 flag++;
             }
           });
