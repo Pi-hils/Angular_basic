@@ -16,10 +16,9 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
+
   checkLoginDetails() {
     let login = this.loginRef.value;
-    console.log(login);        
+    console.log(login); 
   }
-
 }
