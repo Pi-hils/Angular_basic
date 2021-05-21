@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { LoginService } from '../login.service';
 
 @Component({
   selector: 'app-register',
@@ -13,12 +14,21 @@ export class RegisterComponent implements OnInit {
  })
 
   result?:string=""
-  constructor() { }
+  constructor(public ls:LoginService) { }
 
   ngOnInit(): void {
   }
-  registerAccount(){
 
+    registerAccount(){
+      let login = this.registerRef.value;
+      this.ls.createLogin(login).subscribe(data=>{
+        this.result="Account Created successfully"
+      },error=> {
+        this.result ="Account didn't created"
+      })
+      this.registerRef.reset();
+    }
+  
   }
 
-}
+
